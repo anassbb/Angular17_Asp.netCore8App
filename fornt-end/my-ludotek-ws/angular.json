@@ -16,17 +16,13 @@
             "outputPath": "dist/fornt-end",
             "index": "projects/fornt-end/src/index.html",
             "browser": "projects/fornt-end/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/fornt-end/tsconfig.app.json",
             "assets": [
               "projects/fornt-end/src/favicon.ico",
               "projects/fornt-end/src/assets"
             ],
-            "styles": [
-              "projects/fornt-end/src/styles.css"
-            ],
+            "styles": ["projects/fornt-end/src/styles.css"],
             "scripts": [],
             "server": "projects/fornt-end/src/main.server.ts",
             "prerender": true,
@@ -39,8 +35,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "250kb",
+                  "maximumError": "500kb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -79,18 +75,13 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/fornt-end/tsconfig.spec.json",
             "assets": [
               "projects/fornt-end/src/favicon.ico",
               "projects/fornt-end/src/assets"
             ],
-            "styles": [
-              "projects/fornt-end/src/styles.css"
-            ],
+            "styles": ["projects/fornt-end/src/styles.css"],
             "scripts": []
           }
         }
@@ -121,10 +112,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/book-feature/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
+            "polyfills": ["zone.js", "zone.js/testing"]
           }
         }
       }
