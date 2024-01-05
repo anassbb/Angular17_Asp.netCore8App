@@ -1,0 +1,100 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "fornt-end": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/fornt-end",
+      "sourceRoot": "projects/fornt-end/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/fornt-end",
+            "index": "projects/fornt-end/src/index.html",
+            "browser": "projects/fornt-end/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/fornt-end/tsconfig.app.json",
+            "assets": [
+              "projects/fornt-end/src/favicon.ico",
+              "projects/fornt-end/src/assets"
+            ],
+            "styles": [
+              "projects/fornt-end/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/fornt-end/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/fornt-end/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "fornt-end:build:production"
+            },
+            "development": {
+              "buildTarget": "fornt-end:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "fornt-end:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/fornt-end/tsconfig.spec.json",
+            "assets": [
+              "projects/fornt-end/src/favicon.ico",
+              "projects/fornt-end/src/assets"
+            ],
+            "styles": [
+              "projects/fornt-end/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  }
+}
