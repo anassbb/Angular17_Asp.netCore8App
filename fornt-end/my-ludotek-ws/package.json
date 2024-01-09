@@ -8,7 +8,8 @@
     "build:libs:books": "ng build book-feature",
     "build:libs": "npm run build:libs:books",
     "build:app": "ng build fornt-end",
-    "watch": "ng build --watch --configuration development",
+    "watch:libs:books": "ng build book-feature  --watch --configuration development",
+    "watch:app": "ng build front-end --watch --configuration development",
     "test": "ng test",
     "serve:ssr:fornt-end": "node dist/fornt-end/server/server.mjs"
   },
