@@ -8,7 +8,7 @@
     "build:libs:tools-routes": "ng build tools-routes",
     "build:libs:tools": "npm run build:libs:tools-routes ",
     "build:lib:books": "ng build book-feature",
-    "build:libs": "npm run build:libs:books",
+    "build:libs": "npm run build:lib:books",
     "build:app": "ng build fornt-end",
     "watch:libs:tools-routes": "ng build tools-routes  --watch --configuration development",
     "watch:libs:books": "ng build book-feature  --watch --configuration development",

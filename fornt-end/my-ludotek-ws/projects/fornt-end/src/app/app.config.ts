@@ -8,7 +8,7 @@ import { WithDataCustopmPreloadStrategy } from 'tools-routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes, withPreloading()),
+    provideRouter(routes, withPreloading(WithDataCustopmPreloadStrategy)),
     provideClientHydration(),
   ],
 };

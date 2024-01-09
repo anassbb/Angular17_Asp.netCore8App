@@ -1,1 +1,8 @@
-<p>list-books works!</p>
+@for (book of books$ | async; track book.id) {
+<div>
+  {{ book.titre }}
+</div>
+<div>
+  {{ book.author.name }}
+</div>
+}
