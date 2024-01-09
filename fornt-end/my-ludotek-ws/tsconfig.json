@@ -5,6 +5,9 @@
     "paths": {
       "book-feature": [
         "./dist/book-feature"
+      ],
+      "tools-routes": [
+        "./dist/tools-routes"
       ]
     },
     "outDir": "./dist/out-tsc",
