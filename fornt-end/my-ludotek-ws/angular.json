@@ -91,7 +91,7 @@
       "projectType": "library",
       "root": "projects/book-feature",
       "sourceRoot": "projects/book-feature/src",
-      "prefix": "lib",
+      "prefix": "dtbc",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
